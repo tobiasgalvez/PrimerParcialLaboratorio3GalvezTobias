@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" id = "form_principal" class = "form">
+    
+        <label for="tipo">Filtrar por</label>
+        <select id="tipo" name="tipo">
+            <option value="todos">Todos</option>
+            <option value="aereo">Aereo</option>
+            <option value="terrestre">Terrestre</option>
+        </select>
+
+        <br />
+
+        <label for="textoPromedio">Promedio Velocidad Maxima:</label>
+        <label id="texto_promedio"></label>
+        <button class="btn" id="btn_calcular_promedio">Calcular</button>
+
+        <br />  
+
+        <label>Mostrar columnas</label>
+        <br />
+        <input type="checkbox" id="id_checkbox" class="checkbox" checked>ID</input>
+        <input type="checkbox" id="modelo_checkbox" class="checkbox" checked>Modelo</input>
+        <input type="checkbox" id="anoFab_checkbox" class="checkbox" checked>Año fab</input>
+        <input type="checkbox" id="velMax_checkbox" class="checkbox" checked>Vel max</input>
+        <input type="checkbox" id="altMax_checkbox" class="checkbox" checked>Alt max</input>
+        <input type="checkbox" id="autonomia_checkbox" class="checkbox" checked>Autonomia</input>
+        <input type="checkbox" id="cantPue_checkbox" class="checkbox" checked>Cant pue</input>
+        <input type="checkbox" id="cantRue_checkbox" class="checkbox" checked>Cant Rue</input>
+
+
+        <table border="1" id="tablaDatos">
+            <thead>
+                <tr>
+                    <th id="id_t">ID</th>
+                    <th>Modelo</th>
+                    <th>Año fab</th>
+                    <th>Vel max</th>
+                    <th>Alt max</th>
+                    <th>Autonomia</th>
+                    <th>Cant Pue</th>
+                    <th>Cant rue</th>
+                    <th>Eliminar</th>
+                </tr>
+            </thead>
+            
+            <tbody id="tablaCuerpo">
+            </tbody>
+            
+
+        </table>
+
+        <br>
+        <button class="btn" id="btn_agregar">Agregar</button>
+        <button class="btn" id="btn_editar">Editar</button>
+      
+
+    </form>
+
+
+    <form action="" id = "form_agregar" class = "form" style="display: none;">
+
+        <h1>Formulario ABM</h1>
+
+        <label id="label_select_id_editar">Vehiculo a editar:</label>
+        <select id = "select_id_editar">
+
+
+
+        </select>
+        
+        <div class="inputs_container"> 
+            <label for="modelo">modelo:</label>
+            <input type="text" id="modelo" name="modelo" required>
+
+            
+            <label for="anoFab">Año de fabricación:</label>
+            <input type="text" id="anoFab" name="anoFab" required>
+
+    
+    
+            <label for="velMax">velocidad máxima:</label>
+            <input type="number" id="velMax" name="velMax" required>
+
+            <label for="tipo" id="tipo_agregar_label_abm">Tipo:</label>
+        <select id="tipo_agregar">
+            <option value="aereo">Aereo</option>
+            <option value="terrestre">Terrestre</option>
+        </select>
+            
+            <label for="altMax_agregar" id="altMax_agregar_label">Altura máxima:</label>
+            <input type="number" id="altMax_agregar" name="altMax" required>
+
+
+
+            
+            <label for="autonomia_agregar" id="autonomia_agregar_label">Autonomia:</label>
+            <input type="number" id="autonomia_agregar" name="autonomia" required>
+
+            
+            <label for="cantPue_agregar" id="cantPue_agregar_label">Cantidad de puertas:</label>
+            <input type="number" id="cantPue_agregar" name="cantPue">
+
+    
+    
+            <label for="cantRue_agregar" id="cantRue_agregar_label">Cantidad de ruedas:</label>
+            <input type="number" id="cantRue_agregar" name="cantRue">
+
+
+        </div>
+
+        
+        
+        <button class="btn" id="btn_aceptar">Aceptar</button>
+        <button class="btn" id="btn_cancelar">Cancelar</button>
+
+        <button class="btn" id="btn_aceptar_cambio">Aceptar cambio</button>
+        <button class="btn" id="btn_cancelar_cambio">Cancelar Cambio</button>
+
+
+
+
+
+
+
+    </form>
+
+
+<br />
+<br />
+
+<label id="mensaje_error">eeeeeeee</label>
+
+
+
+
+    <script src="archivo.js"></script>
+</body>
+</html>
